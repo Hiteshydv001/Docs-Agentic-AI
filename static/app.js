@@ -11,6 +11,24 @@ const answerText = document.getElementById("answer-text");
 const sourcesContainer = document.getElementById("sources-container");
 const sourcesList = document.getElementById("sources-list");
 
+const API_BASE = (() => {
+    if (window.APP_CONFIG?.apiBase) {
+        return window.APP_CONFIG.apiBase.replace(/\/$/, "");
+    }
+
+    const origin = window.location.origin;
+    if (origin && origin.startsWith("http") && origin !== "null") {
+        return origin;
+    }
+
+    return "https://docs-agentic-ai.onrender.com";
+})();
+
+const apiUrl = path => {
+    const normalized = path.startsWith("/") ? path : `/${path}`;
+    return `${API_BASE}${normalized}`;
+};
+
 let documentReady = false;
 
 askButton.disabled = true;
@@ -49,7 +67,7 @@ uploadForm.addEventListener("submit", async event => {
     askButton.disabled = true;
 
     try {
-        const response = await fetch("/api/upload", {
+        const response = await fetch(apiUrl("/api/upload"), {
             method: "POST",
             body: formData,
         });
@@ -94,7 +112,7 @@ questionForm.addEventListener("submit", async event => {
     askButton.disabled = true;
 
     try {
-        const response = await fetch("/api/ask", {
+        const response = await fetch(apiUrl("/api/ask"), {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ question }),
