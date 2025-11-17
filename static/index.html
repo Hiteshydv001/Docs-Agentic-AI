@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalpit AI Agent Lab</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="paper-noise" aria-hidden="true"></div>
+    <div class="menu-page">
+        <header class="menu-header">
+            <div class="menu-header-top">
+                <div class="brand-column">
+                    <span class="menu-tag">Kalpit Private Limited · UK</span>
+                    <h1>Kalpit AI Agent Lab</h1>
+                    <p class="brand-copy">AI Agent Development Internship Assignment Workspace.</p>
+                </div>
+                <nav class="menu-nav" aria-label="Primary">
+                    <a href="#upload-section" class="nav-pill">Home</a>
+                    <a href="#upload-section" class="nav-pill">Upload</a>
+                    <a href="#qa-section" class="nav-pill">Ask</a>
+                    <a href="#sources-container" class="nav-pill">Sources</a>
+                </nav>
+                <div class="mascot" aria-hidden="true">
+                    <div class="mascot-face">
+                        <span class="mascot-eyes"></span>
+                        <span class="mascot-smile"></span>
+                    </div>
+                    <span class="mascot-caption">Docu Bot</span>
+                </div>
+            </div>
+            <div class="menu-divider" aria-hidden="true"></div>
+            <div class="menu-highlight">
+                <div>
+                    <p class="highlight-label">Intern Brief</p>
+                    <p class="highlight-copy">Showcase end-to-end document intelligence for Kalpit&apos;s AI Agent team.</p>
+                </div>
+                <div class="highlight-price">Cohort &lsquo;25</div>
+            </div>
+        </header>
+        <main class="menu-grid">
+            <section class="menu-panel" id="upload-section">
+                <div class="panel-heading">
+                    <p class="panel-tag">Phase 01</p>
+                    <h2>Upload Research Asset</h2>
+                </div>
+                <form id="upload-form">
+                    <label class="file-label" for="file-input">Attach source file (TXT, PDF, DOCX)</label>
+                    <input type="file" id="file-input" accept=".txt,.pdf,.docx">
+                    <button type="submit" id="upload-button">
+                        Process Document
+                        <span class="button-arrow" aria-hidden="true">↗</span>
+                    </button>
+                </form>
+                <ul class="menu-facts">
+                    <li>Securely analyzed within the internship sandbox.</li>
+                    <li>Optimized for long transcripts and policy decks.</li>
+                    <li>Ideal for proposals, briefs, and meeting notes.</li>
+                </ul>
+                <p class="status" id="upload-status"></p>
+            </section>
+
+            <section class="menu-panel" id="qa-section">
+                <div class="panel-heading">
+                    <p class="panel-tag">Phase 02</p>
+                    <h2>Ask the Agent</h2>
+                </div>
+                <form id="question-form">
+                    <label class="sr-only" for="question-input">Enter your question</label>
+                    <textarea id="question-input" rows="4" placeholder="Ask anything Kalpit stakeholders would expect"></textarea>
+                    <button type="submit" id="ask-button">
+                        Get Answer
+                        <span class="button-arrow" aria-hidden="true">↗</span>
+                    </button>
+                </form>
+                <p class="status" id="question-status"></p>
+
+                <div id="answer-container" class="answer hidden">
+                    <div class="answer-header">
+                        <h3>Kalpit Answer</h3>
+                        <span class="answer-pill">AI Agent Dev Stack</span>
+                    </div>
+                    <p id="answer-text"></p>
+                </div>
+
+                <div id="sources-container" class="sources hidden">
+                    <div class="sources-header">
+                        <h3>Source Evidence</h3>
+                        <span class="sources-subtitle">Top snippets cited for Kalpit reviewers</span>
+                    </div>
+                    <ul id="sources-list"></ul>
+                </div>
+            </section>
+        </main>
+        <div class="doodle doodle-left" aria-hidden="true"></div>
+        <div class="doodle doodle-right" aria-hidden="true"></div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>

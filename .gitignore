@@ -1,0 +1,45 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.cover
+*.py,cover
+
+
+uploads/
+chroma_db/
+# Virtual environments
+.env
+.venv
+venv/
+ENV/
+
+# Dependency / build artifacts
+*.egg-info/
+*.eggs/
+dist/
+build/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local data directories
+uploads/
+chroma_db/
+
+# Logs & temp
+*.log
+*.tmp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker / deployment
+*.tar
+*.img
