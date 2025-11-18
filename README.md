@@ -2,6 +2,12 @@
 
 Retro-styled document question answering workspace completed for the **Kalpit Private Limited (UK) – AI Agent Development Internship** assignment. The project couples a FastAPI backend, LangChain-powered Retrieval-Augmented Generation (RAG) pipeline, and a lightweight static frontend that streams answers with cited snippets.
 
+<video width="100%" controls>
+  <source src="https://github.com/Hiteshydv001/Docs-Agentic-AI/blob/main/Kalpit%20Private%20Limited%2C%20UK.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 ## Table of Contents
 1. [Features](#features)
 2. [Architecture](#architecture)
